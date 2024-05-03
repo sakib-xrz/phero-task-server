@@ -13,7 +13,6 @@ const register = catchAsync(async (req, res) => {
     message: "Registration successful",
     data: {
       access: result.token,
-      user: result.user,
     },
   });
 });
@@ -29,7 +28,6 @@ const login = catchAsync(async (req, res) => {
     message: "Login successful",
     data: {
       access: result.token,
-      user: result.user,
     },
   });
 });

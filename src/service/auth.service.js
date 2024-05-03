@@ -35,12 +35,8 @@ const handleRegister = async (registerData) => {
     expiresIn,
   });
 
-  const user = newUser.toObject();
-  delete user.password;
-
   return {
     token,
-    user,
   };
 };
 
@@ -79,12 +75,8 @@ const handleLogin = async (loginData) => {
     expiresIn,
   });
 
-  const userData = user.toObject();
-  delete userData.password;
-
   return {
     token,
-    user: userData,
   };
 };
 
